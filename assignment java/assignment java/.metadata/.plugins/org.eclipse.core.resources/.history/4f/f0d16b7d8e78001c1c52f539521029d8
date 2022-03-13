@@ -1,0 +1,33 @@
+package com.te.assignment.duo;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Id;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import com.te.assignment.dto.Student;
+
+public class StudentId {
+	public static void main(String[] args) {
+		//public Student getStudentId() {
+			EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Munit01");
+			EntityManager entityManager = entityManagerFactory.createEntityManager();
+
+			String query = "select id from Student";
+			 Query query2 = entityManager.createNativeQuery(query);
+			List<Object[]> resultList = query2.getResultList();
+			for (Object[] objects : resultList) {
+				System.out.println(objects);
+			}
+			//}
+			// return getStudentId;
+		}
+			
+	}
+	
+	
+
+

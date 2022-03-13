@@ -1,0 +1,25 @@
+package com.te.assaignment.service;
+
+import java.util.Scanner;
+
+import com.te.assignment.duo.StudentMethods;
+
+public class StudentMain {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("press 1 to display id");
+		int userInput = scanner.nextInt();
+		switch (userInput) {
+		case 1:
+			StudentMethods id = new StudentMethods();
+			id.getStudentId();
+			System.out.println(id);
+			break;
+
+		default:
+			System.err.println("invalid input");
+			break;
+		}
+
+	}
+}

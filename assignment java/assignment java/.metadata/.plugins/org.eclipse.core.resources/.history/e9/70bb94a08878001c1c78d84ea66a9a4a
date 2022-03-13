@@ -1,0 +1,11 @@
+package com.te.assignment.duo;
+
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import com.te.assignment.dto.Student;
+
+public class StudentId {
+	
+
+}

@@ -1,0 +1,25 @@
+package com.te.assaignment.service;
+
+import java.util.Scanner;
+
+import com.te.assignment.dto.Student;
+import com.te.assignment.duo.StudentMethods;
+
+public class StudentMain {
+	public static void main(String[] args) {
+		StudentMethods methods = new StudentMethods();
+		Scanner scanner1 = new Scanner(System.in);
+		System.out.println(
+				"________WELCOME_______\npress 1 to enter ur details\npress 2 to dislpay your id's\npress 3 to display name of student");
+		int userInput = scanner1.nextInt();
+		switch (userInput) {
+		case 1:
+			methods.add();
+			break;
+		case 2:
+			methods.getName();
+			break;
+		}
+
+	}
+}

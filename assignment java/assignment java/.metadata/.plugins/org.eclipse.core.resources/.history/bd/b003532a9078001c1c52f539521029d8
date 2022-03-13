@@ -1,0 +1,22 @@
+package com.te.assaignment.service;
+
+import java.util.Scanner;
+
+import com.te.assignment.duo.StudentId;
+
+public class StudentMain {
+ public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in);
+	System.out.println("press 1 to display id");
+	int userInput = scanner.nextInt();
+	StudentId id = new StudentId();
+	switch (userInput) {
+	case 1:
+		sy
+		break;
+
+	default:
+		break;
+	}
+}
+}

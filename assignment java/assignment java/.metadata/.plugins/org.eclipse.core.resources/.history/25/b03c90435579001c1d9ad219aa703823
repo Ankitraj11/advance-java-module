@@ -1,0 +1,71 @@
+package com.te.assignment.duo;
+
+import java.util.List;
+import java.util.Scanner;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Id;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import com.te.assignment.dto.Student;
+
+public class StudentMethods {
+
+	public void  getStudentId() {
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Munit01");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+
+		String query = "select id from Student";
+		Query query2 = entityManager.createNativeQuery(query);
+		List resultList = query2.getResultList();
+		System.out.println(resultList);
+		
+		
+	}
+	public void add() {
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Munit01");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		EntityTransaction entityTransaction = entityManager.getTransaction();
+		Student student = new Student();
+		Scanner scanner = new Scanner(System.in);
+	
+		System.out.println("enter your name");
+		student.setName(scanner.next());
+		
+		System.out.println("enter your marks");
+		student.setMarks(scanner.nextDouble());
+		
+		System.out.println("enter your section");
+		student.setSection(scanner.next());
+						
+		entityTransaction.begin();
+		entityManager.persist(student);		
+		System.out.println("inserted successfully");
+		entityTransaction.commit();
+		
+	}
+	public void getName() {
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Munit01");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		
+		String query1 = "select name from Student";
+		Query query3 = entityManager.createNativeQuery(query1);
+		List resultList1 = query3.getResultList();
+		System.out.println(resultList1);	
+	}
+	public void toUpdate() {
+		String query4 = "select name from Student";
+		Query query5 = enti
+		List resultList1 = query5.getResultList();
+		System.out.println(resultList1);	
+		
+	}
+
+
+		
+	}
+
+
